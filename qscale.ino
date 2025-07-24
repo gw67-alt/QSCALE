@@ -50,7 +50,7 @@ unsigned long programStartTime = 0;
 unsigned long lastSpeedupPrint = 0;
 #define SPEEDUP_INTERVAL 5000
 #define HASH_RATE_UPDATE_INTERVAL 1000  // Update hash rate every 1 second
-#define DIFFICULTY 1
+#define DIFFICULTY 2
 
 void setup() {
   Serial.begin(115200);
@@ -289,7 +289,7 @@ void loop() {
     
     float currentRms = getRMSValue(); // Default to channel 0
 
-    if (currentTime - lastSample >= SAMPLE_RATE_MS) {
+    if (true) {
       lastSample = currentTime;
       
       // Update all nonce counters
